@@ -1,0 +1,45 @@
+.navbarWrapper{
+  width: 100%;
+  height: 80px;
+  background-color:#FFFFFF;
+}
+.navbar {
+height: 80px; /* 1440x80 top bar */
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 48px;
+background:#ffffff;
+}
+.left {
+display: flex;
+align-items: center;
+}
+.logo {
+width: 176px; /* as requested 176x56 in description */
+height: 56px;
+object-fit: contain;
+margin-left: 150px;
+}
+.right {
+display: flex;
+gap: 12px;
+}
+.login {
+width: 72px;
+height: 38px;
+background: transparent;
+border: none;
+cursor: pointer;
+font-weight: 600;
+}
+.signup {
+width: 84px;
+height: 38px;
+background: #244779; /* provided color */
+border: none;
+color: #fff;
+border-radius: 6px;
+cursor: pointer;
+font-weight: 600;
+}

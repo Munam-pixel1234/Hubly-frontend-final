@@ -1,0 +1,361 @@
+/* ================= WRAPPER ================= */
+.wrapper {
+  display: flex;
+  height: 100vh;
+  background: #f5f7fb;
+  font-family: "Inter", sans-serif;
+}
+
+/* ============ SIDEBAR ============ */
+.sidebar {
+  width: 82px;
+  background: #FAFBFC;
+  border-right: 1px solid #E9ECEF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 8px;
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 44px;
+  margin-bottom: 18px;
+}
+
+.sidebarMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+  width: 100%;
+}
+
+.iconItem {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  border: none;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.iconItem img {
+  width: 22px;
+  opacity: 0.6;
+}
+
+.iconItem:hover img {
+  opacity: 1;
+}
+
+/* active item style */
+.active {
+  background: #FAFBFC;
+  box-shadow: inset 0 0 0 3px rgba(24, 78, 127, 0.08);
+}
+
+.sidebarBottom {
+  margin-top: auto;
+  padding-bottom: 6px;
+}
+
+.profile {
+  width: 38px;
+  border-radius: 999px;
+}
+
+/* ================= CHAT LIST ================= */
+.chatListPane {
+  width: 300px;
+  background: #ffffff;
+  padding: 16px;
+  border-right: 1px solid #e6e6e6;
+}
+
+.chatListPane h2 {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.sub {
+  font-size: 13px;
+  color: #7a7a7a;
+}
+
+.divider {
+  height: 1px;
+  background: #e5e5e5;
+  margin: 12px 0;
+}
+
+.chatItem {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+
+.chatItem img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.chatItem:hover {
+  background: #f1f3f8;
+}
+
+.activeChat {
+  background: #e9efff;
+}
+
+.chatName {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.chatPreview {
+  font-size: 12px;
+  color: #7a7a7a;
+}
+
+/* ================= CHAT PANE ================= */
+.chatPane {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+}
+
+.chatHeader {
+  padding: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.chatBody {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  background: #f9faff;
+}
+
+/* MESSAGE ROWS (NO BACKGROUND) */
+.msgRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.userRow {
+  justify-content: flex-start;
+}
+
+.adminRow {
+  justify-content: flex-end;
+}
+
+.msgAvatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
+.msgText {
+  font-size: 13px;
+  max-width: 65%;
+  line-height: 1.4;
+}
+
+/* STATUS TEXT */
+.missed {
+  color: #d93025;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.resolved {
+  color: #2e7d32;
+  font-size: 13px;
+  text-align: center;
+  margin-top: 12px;
+}
+
+/* INPUT */
+.inputBox {
+  display: flex;
+  padding: 12px;
+  border-top: 1px solid #e6e6e6;
+}
+
+.inputBox input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 20px;
+  border: 1px solid #dcdcdc;
+  outline: none;
+}
+
+.inputBox button {
+  margin-left: 8px;
+  background: #184e7f;
+  color: #ffffff;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* ================= DETAILS ================= */
+.detailsPane {
+  width: 360px;
+  background: #f5f7fb;
+  padding: 16px;
+  border-left: 1px solid #e6e6e6;
+}
+
+.chatTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.chatTitle img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.blue {
+  color: #184e7f;
+  font-size: 13px;
+  margin: 14px 0 6px;
+}
+
+/* DETAIL FIELDS */
+.field {
+  width: 100%;
+  height: 38px;
+  background: #ffffff;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 12px;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.field img {
+  width: 18px;
+}
+
+/* OPTIONS (DROPDOWNS) */
+.option {
+  width: 100%;
+  height: 38px;
+  background: #ffffff;
+  border-radius: 13px;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 12px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.option img {
+  width: 20px;
+}
+
+.option:hover {
+  background: #eef2ff;
+}
+
+.arrow {
+  margin-left: auto;
+  font-size: 12px;
+}
+
+/* DROPDOWN ITEMS */
+.dropdownItem {
+  background: #ffffff;
+  padding: 8px 12px;
+  border-radius: 10px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.dropdownItem:hover {
+  background: #eef2ff;
+}
+
+/* ================= POPUPS ================= */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 490px;
+  height: 141px;
+  background: #d1d6da;
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+.popup p {
+  font-size: 14px;
+}
+
+.popup div {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.popup button {
+  height: 34px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  padding: 0 16px;
+}
+
+.popup button:first-child {
+  width: 143px;
+  background: #ffffff;
+}
+
+.popup button:last-child {
+  width: 150px;
+  background: #184e7f;
+  color: #ffffff;
+}
+
+/* ================= EMPTY ================= */
+.empty {
+  padding: 20px;
+  color: #7a7a7a;
+}

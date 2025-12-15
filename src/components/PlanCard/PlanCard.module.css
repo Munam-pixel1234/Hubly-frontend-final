@@ -1,0 +1,86 @@
+.card {
+  width: 588px;
+  height: 709px;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0px 12px 40px rgba(0, 0, 0, 0.06);
+  font-family: "Barlow", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #1d2d3a;
+}
+
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.price {
+  font-size: 48px;
+  font-weight: 800;
+  color: #244779;
+}
+
+.per {
+  font-size: 16px;
+  color: #6b7986;
+}
+
+.includesTitle {
+  margin-top: 12px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #1d2d3a;
+  text-align: left;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin-top: 8px;
+  flex-grow: 1; /* pushes button to bottom */
+}
+
+.features li {
+  font-size: 18px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #4e5b66;
+}
+
+.features li::before {
+  content: "✔";
+  color: #4fa3ff;
+  font-weight: 700;
+}
+
+.cta {
+  width: 516px;
+  height: 72px;
+  border-radius: 64px;
+  border: 1.5px solid #244779;
+  background: transparent;
+  font-family: "Barlow", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 24px;
+  align-self: center;
+  transition: 0.3s ease;
+}
+
+.cta:hover {
+  background: #244779;
+  color: #ffffff;
+}

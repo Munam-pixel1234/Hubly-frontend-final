@@ -1,0 +1,146 @@
+/* ---- GLOBAL LAYOUT ---- */
+.wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  background: #ffffff;
+}
+
+/* ---- LEFT FORM SECTION ---- */
+.left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  padding: 40px;
+}
+
+/* LOGO POSITION */
+.logo {
+  width: 140px;
+  position: absolute;
+  top: 40px;
+  left: 60px;
+}
+
+/* FORM BOX CENTERED */
+.formBox {
+  width: 480px;  /* Increased width */
+  margin-top: 30px;
+}
+
+/* HEADER */
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 600;
+  color: #1b1c1e;
+}
+
+.signInLink {
+  font-size: 14px;
+  color: #6a4df6;
+  text-decoration: none;
+}
+
+/* INPUT FIELDS */
+.input {
+  width: 100%;
+  height: 46px;
+  margin-top: 16px;
+  border-radius: 8px;
+  border: 1px solid #d1d3da;
+  padding: 0 14px;
+  font-size: 14px;
+}
+
+.input:focus {
+  border-color: #244779;
+  outline: none;
+}
+
+/* CHECKBOX FIX */
+.checkboxRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  font-size: 13px;
+}
+
+.checkboxRow input {
+  width: 16px;
+  height: 16px;
+}
+
+/* ERROR MESSAGE */
+.error {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #d00000;
+}
+
+/* BUTTON */
+.signupBtn {
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+  border-radius: 50px;
+  border: none;
+  font-size: 15px;
+  cursor: not-allowed;
+  background: #cfcfcf;
+  transition: 0.3s;
+}
+
+.activeBtn {
+  background: #244779;
+  cursor: pointer;
+  color: white;
+}
+
+/* FOOTER NOTE */
+.footerNote {
+  margin-top: 50px;
+  font-size: 11px;
+  text-align: center;
+  color: #8b8f9c;
+  width: 80%;
+}
+
+/* ---- RIGHT IMAGE SECTION ---- */
+.right {
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 900px) {
+  .right {
+    display: none;
+  }
+
+  .left {
+    width: 100%;
+  }
+
+  .formBox {
+    width: 95%;
+  }
+}

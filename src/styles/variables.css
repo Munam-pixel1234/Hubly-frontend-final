@@ -1,0 +1,25 @@
+:root {
+  /* Primary Colors */
+  --primary: #1b4bff;
+  --primary-light: #e6ebff;
+
+  /* Text Colors */
+  --text-dark: #1f1f1f;
+  --text-gray: #6b7280;
+
+  /* Backgrounds */
+  --bg-light: #f5f7ff;
+  --white: #ffffff;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 20px;
+
+  /* Shadows */
+  --shadow-sm: 0px 2px 6px rgba(0,0,0,0.08);
+  --shadow-md: 0px 4px 8px rgba(0,0,0,0.12);
+
+  /* Fonts */
+  --font-main: "Inter", sans-serif;
+}

@@ -1,0 +1,68 @@
+.footer {
+  width: 100%;
+  height: 666px;
+  background: #FFFFFF;
+  margin: 0 auto;
+  position: relative;
+  font-family: Inter, sans-serif;
+  padding-top: 120px;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 120px;
+  align-items: flex-start;
+}
+
+/* LEFT LOGO */
+.logo {
+  width: 180px;
+  height: auto;
+}
+
+/* CENTER SECTION */
+.center {
+  flex: 1;
+}
+
+/* TOP ROW — 3 COLS EXACTLY LIKE IMAGE */
+.topRow {
+  display: flex;
+  justify-content: flex-start;
+  gap: 140px;     /* prevents text wrapping */
+  margin-bottom: 80px;  /* creates the spacing seen in screenshot */
+}
+
+/* BOTTOM ROW — 2 COLS LOWER */
+.bottomRow {
+  display: flex;
+  gap: 200px;  /* big horizontal spacing like image */
+}
+
+/* COLUMN STYLES */
+.col h4 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.col p {
+  font-size: 17px;
+  color: #6b7986;
+  margin-bottom: 12px;
+  white-space: nowrap;   /* FIX: prevents breaking “Boost payment success” */
+}
+
+/* RIGHT ICONS IMAGE */
+.right {
+  position: absolute;
+  bottom: 70px;
+  right:700px;
+}
+
+.icons {
+  width: 260px;
+  height: auto;
+}

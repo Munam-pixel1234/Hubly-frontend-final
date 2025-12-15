@@ -1,0 +1,162 @@
+/* ------------------------- */
+/* HERO SECTION GLOBAL STYLES */
+/* ------------------------- */
+
+.hero {
+  width: 100%;
+  height: 1000px;
+  background-color: #F6FBFD;
+}
+.container{
+    margin-left: 300px;
+}
+
+.title {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 1.5;
+  position: relative;
+  top: -30px;   /* Move downward */
+  transform: translateX(10px);
+}
+
+.subtitle {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #30404D;
+  transform: translate(10px, -50px);
+
+}
+
+.ctaRow {
+  display: flex;
+  gap: 16px;
+  margin-left: 190px;
+  transform: translateY(210px); 
+}
+
+.primary {
+  background: #244779;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.ghost {
+  background: transparent;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.right {
+  width: 480px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ------------------------- */
+/* IMAGE STACK — CLEAN BASE   */
+/* ------------------------- */
+
+.imageStack {
+  position: relative;
+  width: 500px;
+  height: 500px;
+}
+
+.imageStack img {
+  position: absolute;
+  object-fit: cover;
+  border-radius: 14px;
+  transform: translateY(-10px);
+}
+
+/* ------------------------- */
+/* INDIVIDUAL IMAGE STYLING   */
+/* ------------------------- */
+
+/* I2 — Main big image */
+.imageStack img:nth-child(1) {
+  width: 420px;
+  height: 430px;
+  top: -225px;
+  left: 40px;
+  transform: translateX(1600px)
+}
+
+/* I3 — right small image */
+.imageStack img:nth-child(2) {
+  width: 242px;
+  height: 173px;
+  top: 110px;
+  right: -10px;
+  z-index: 3;
+  transform: translateX(1325px)
+}
+
+/* I4 — bottom-left medium */
+.imageStack img:nth-child(3) {
+  width: 212px;
+  height: 131px;
+  bottom: 250px;
+  left: 0px;
+  z-index: 2;
+  transform: translateX(1950px)
+}
+
+/* I5 — bottom-right small image */
+.imageStack img:nth-child(4) {
+  width: 285px;
+  height: 64px;
+  bottom: 700px;
+  right: 20px;
+  z-index: 5;
+  transform: translateX(1720px)
+}
+
+/* ------------------------- */
+/* DECORATIVE STRIP */
+/* ------------------------- */
+
+.decorative {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.decorative img {
+  width: 100%;
+  max-width:100%;
+  height: 144px;
+  object-fit: cover;
+}
+
+/* ===================================== */
+/* ⭐ ADDED NEW UPDATED CSS (NOT TOUCHING YOURS) */
+/* ===================================== */
+
+.textBox {
+  border: 1px solid rgba(0,0,0,0.2);
+  padding: 20px 25px;
+  width: fit-content;
+  background:transparent;
+  border-radius: 12px;
+
+  /* alignment (stays with your translate settings) */
+  position: relative;
+  top: 200px;        /* controls downward movement */
+  left: 190px;      /* same horizontal alignment */
+}

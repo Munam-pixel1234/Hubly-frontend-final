@@ -1,0 +1,846 @@
+
+/* ============ SIDEBAR ============ */
+.sidebar {
+  width: 82px;
+  background: #FAFBFC; /* as requested */
+  border-right: 1px solid #E9ECEF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 8px;
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 44px;
+  margin-bottom: 18px;
+}
+
+.sidebarMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+  width: 100%;
+}
+
+.iconItem {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  border: none;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.iconItem img {
+  width: 22px;
+  opacity: 0.6;
+}
+
+.iconItem:hover img {
+  opacity: 1;
+}
+
+/* active item style */
+.active {
+  background: #FAFBFC;
+  box-shadow: inset 0 0 0 3px rgba(24, 78, 127, 0.08);
+}
+
+.sidebarBottom {
+  margin-top: auto;
+  padding-bottom: 6px;
+}
+
+.profile {
+  width: 38px;
+  border-radius: 999px;
+}
+
+
+
+/* ============ LAYOUT ============ */
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background: #f6fbfd;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}
+
+.main {
+  flex: 1;
+  padding: 40px 56px;
+  background: #f6fbfd;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 26px;
+}
+
+/* Grid that can hold ChatPreview + cards.
+   If you render ChatPreview as the first child, it will sit in the left column
+   and the cards will stack on the right, similar to Figma.  */
+.grid {
+  display: grid;
+  grid-template-columns: 380px minmax(0, 1fr);
+  column-gap: 28px;
+  row-gap: 18px;
+  align-items: flex-start;
+}
+
+
+
+
+/* ========== HEADER COLOR CARD (Exact Figma) ========== */
+
+.headerCard {
+  width: 400px;
+  height: 195px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 20px 22px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.10);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.headerTitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #000000;
+}
+
+/* Row containing preset color circles */
+.colorRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Color circle (pick from presets) */
+.colorCircle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #D3D3D3;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.colorCircle:hover {
+  transform: scale(1.05);
+}
+
+/* Row for Selected Square + Hex Code box */
+.colorSelectRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 6px;
+}
+
+/* Selected color square */
+.selectedSquare {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid #d1d5db;
+}
+
+/* Hidden input for manual color picking */
+.hiddenInput {
+  display: none;
+}
+
+/* HEX value box */
+.hexBox {
+  width: 231px;
+  height: 48px;
+  background: #EEEEEE;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+  font-size: 14px;
+  color: #33475B;
+  font-family: "Poppins", sans-serif;
+}
+
+
+
+
+
+
+/* ---- CUSTOM BACKGROUND COLOR CARD ---- */
+
+.colorCard {
+  width: 400px;
+  height: 195px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 20px 22px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-sizing: border-box;
+}
+
+.cardTitle {
+  font-size: 13px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: #000000;
+}
+
+/* COLOR CIRCLES */
+.colorRow {
+  display: flex;
+  gap: 14px;
+  margin-top: 4px;
+}
+
+.colorCircle {
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.colorCircle:hover {
+  transform: scale(1.08);
+}
+
+/* SELECTED COLOR PREVIEW + HEX FIELD */
+.colorSelectRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+/* LEFT BOX (48×48) */
+.selectedColorBox {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+}
+
+/* RIGHT BOX (231×48) */
+.hexBox {
+  width: 231px;
+  height: 48px;
+  background: #F6F7F5;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  padding-left: 14px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  color: #000000;
+  border: 1px solid #e3e3e3;
+}
+
+
+
+
+
+/* Customize Message Card Container */
+.customCard {
+  background: #ffffff;
+  width: 400px;
+  min-height: 195px;
+  border-radius: 18px;
+  padding: 18px 22px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Title */
+.customTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 6px;
+}
+
+/* Message Row Background (Figma: F6F7F5, 231×48, radius 9) */
+.messageRow {
+  width: 231px;
+  height: 48px;
+  background: #f6f7f5;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  position: relative;
+}
+
+/* Message text (not touching bubble background) */
+.messageText {
+  font-size: 13px;
+  color: #000000;
+}
+
+/* Edit icon */
+.editIcon {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.editIcon:hover {
+  opacity: 1;
+}
+
+/* Input field when editing */
+.messageInput {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border: none;
+  outline: none;
+  padding: 0 14px;
+  font-size: 13px;
+  border-radius: 9px;
+}
+
+
+
+
+
+
+
+/* -------- INTRO FORM CARD CONTAINER -------- */
+.introFormCard {
+  width: 400px;
+  min-height: 308px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 18px 22px 22px;
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Title */
+.introFormTitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+/* Field Wrapper */
+.introFormGroup {
+  margin-bottom: 10px;
+}
+
+/* Labels above each field */
+.introLabel {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #505050;
+  margin-bottom: 6px;
+}
+
+/* Editable placeholder input */
+.introInput {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #000000;
+  border: none;
+  outline: none;
+  padding: 4px 2px;
+}
+
+/* Underline */
+.introUnderline {
+  width: 100%;
+  height: 1px;
+  background: #D9D9D9;
+  margin-top: 4px;
+}
+
+/* Submit button */
+.introSubmitBtn {
+  width: 290px;
+  height: 44px;
+  align-self: center;
+  margin-top: 12px;
+  background: #184E7F; /* dynamic from headerColor */
+  border: none;
+  border-radius: 13px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #FAFBFC;
+  cursor: pointer;
+}
+
+
+
+
+
+
+/* ------------------------------ */
+/*      WELCOME MESSAGE CARD      */
+/* ------------------------------ */
+
+.welcomeCard {
+  width: 400px;
+  height: 174px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 16px 18px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-direction: column;
+}
+
+.welcomeTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.welcomeBox {
+  width: 360px;
+  height: 92px;
+  border-radius: 9px;
+  background: #f6f7f5;
+  padding: 10px 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.welcomeText {
+  font-size: 13px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  color: #000000;
+  font-family: "Poppins", sans-serif;
+  width: 85%;
+}
+
+.welcomeEditIcon {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.welcomeEditIcon:hover {
+  opacity: 1;
+}
+
+.welcomeTextArea {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  resize: none;
+  outline: none;
+  font-size: 13px;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.4;
+}
+
+.wordCount {
+  text-align: right;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #6a6a6a;
+  padding-right: 6px;
+  font-family: "Poppins", sans-serif;
+}
+
+
+
+
+
+
+/* MISSed CHAT TIMER CARD (Figma match) */
+.missedCard {
+  width: 400px;
+  height: 174px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 16px 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.16);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.missedTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 12px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* timer area: three columns then small separators column for ":" */
+.timerArea {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  height: 88px; /* keeps rows aligned */
+}
+
+/* each column */
+.timerCol {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  width: 76px;
+}
+
+/* single item in column */
+.timerItem {
+  width: 76px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #111827;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* active row style (left & right) - keep simple */
+.activeRow {
+  font-weight: 600;
+}
+
+/* center column “set time” highlighted row */
+.centerActive {
+  background: #edf4f5;
+  border-radius: 6px;
+  width: 100%;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* colon column (vertical : separators) */
+.colonCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px;
+  margin-left: 4px;
+}
+
+.colonItem,
+.colonItemSpacer {
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 18px;
+}
+
+.colonItemSpacer {
+  /* spacer for even spacing (middle) */
+  opacity: 0;
+}
+
+/* footer area for small Save button */
+.missedFooter {
+  margin-top: auto;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 8px;
+}
+
+/* small save button 90x24, radius 8 */
+.saveSmall {
+  width: 90px;
+  height: 24px;
+  background: #184e7f;
+  color: #fafbfc;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.saveSmall:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+
+
+
+
+
+
+
+
+/* ============ CHAT PREVIEW (LEFT COLUMN) ============ */
+
+.previewContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+/* big phone-like chat box */
+.chatBox {
+  width: 320px;
+  height: 440px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* header bar */
+.chatHeader {
+  height: 52px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  background: #33475b; /* will be overridden inline from settings.headerColor */
+  color: #ffffff;
+}
+
+.headerAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: #ffffff;
+  padding: 4px;
+  margin-right: 10px;
+  object-fit: contain;
+}
+
+.chatTitle {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* body area */
+.chatBody {
+  flex: 1;
+  padding: 12px 12px 10px;
+  background: #e6ecff; /* overridden inline from settings.backgroundColor */
+  box-sizing: border-box;
+}
+
+.chatScroll {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* message rows */
+
+.messageRow {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.chatAvatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  margin-right: 6px;
+}
+
+.avatarSpacer {
+  width: 26px;
+  height: 26px;
+  margin-right: 6px;
+}
+
+.messageBubble {
+  max-width: 210px;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 6px 8px;
+  font-size: 11px;
+  color: #111827;
+  line-height: 1.4;
+}
+
+/* intro mini form bubble inside preview */
+.formBubble {
+  margin-top: 10px;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 10px 12px 12px;
+  font-size: 11px;
+  color: #111827;
+}
+
+.formTitle {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.formLabel {
+  display: block;
+  font-size: 10px;
+  color: #6b7280;
+  margin-top: 4px;
+  margin-bottom: 2px;
+}
+
+.formInput {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 11px;
+  padding: 2px 0 4px;
+  outline: none;
+}
+
+.formInput::placeholder {
+  color: #9ca3af;
+}
+
+.submitBtn {
+  width: 100%;
+  height: 26px;
+  margin-top: 8px;
+  border-radius: 6px;
+  border: none;
+  background: #244779;
+  color: #ffffff;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+/* footer input (Write a message...) */
+.footerInput {
+  height: 46px;
+  border-top: 1px solid #e5e7eb;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  gap: 8px;
+}
+
+.inputField {
+  flex: 1;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  padding: 0 12px;
+  height: 32px;
+  font-size: 12px;
+  outline: none;
+}
+
+.sendButton {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  border: none;
+  background: #e5ecff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* popup bubble preview under the chat */
+.popPreview {
+  position: relative;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+}
+
+.popAvatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+}
+
+.popBubble {
+  font-size: 11px;
+  line-height: 1.4;
+  color: #111827;
+  max-width: 210px;
+  white-space: pre-line;
+}
+
+.popClose {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  border: none;
+  background: transparent;
+  font-size: 12px;
+  cursor: pointer;
+  color: #9ca3af;
+}
+.layout {
+  display: flex;
+  gap: 40px;
+}
+
+.previewSection {
+  width: 420px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+}
