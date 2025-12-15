@@ -28,10 +28,7 @@ export default function Hero() {
 
         <div className={styles.right}>
           <div className={styles.imageStack}>
-            <img src="/assets/images/temp1.png" alt="I2" />
-            <img src="/assets/images/temp2.png" alt="I3" />
-            <img src="/assets/images/temp3.png" alt="I4" />
-            <img src="/assets/images/temp4.png" alt="I5" />
+            <img src="/assets/images/meeting.png" alt="meeting" />
           </div>
         </div>
       </div>
