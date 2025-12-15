@@ -71,59 +71,17 @@
 
 .imageStack {
   position: relative;
-  width: 500px;
-  height: 500px;
+  width: 300px;
+  height: 300px;
 }
 
 .imageStack img {
   position: absolute;
   object-fit: cover;
   border-radius: 14px;
-  transform: translateY(-10px);
+  transform: translate(1500px, -200px);
 }
 
-/* ------------------------- */
-/* INDIVIDUAL IMAGE STYLING   */
-/* ------------------------- */
-
-/* I2 — Main big image */
-.imageStack img:nth-child(1) {
-  width: 420px;
-  height: 430px;
-  top: -225px;
-  left: 40px;
-  transform: translateX(1600px)
-}
-
-/* I3 — right small image */
-.imageStack img:nth-child(2) {
-  width: 242px;
-  height: 173px;
-  top: 110px;
-  right: -10px;
-  z-index: 3;
-  transform: translateX(1325px)
-}
-
-/* I4 — bottom-left medium */
-.imageStack img:nth-child(3) {
-  width: 212px;
-  height: 131px;
-  bottom: 250px;
-  left: 0px;
-  z-index: 2;
-  transform: translateX(1950px)
-}
-
-/* I5 — bottom-right small image */
-.imageStack img:nth-child(4) {
-  width: 285px;
-  height: 64px;
-  bottom: 700px;
-  right: 20px;
-  z-index: 5;
-  transform: translateX(1720px)
-}
 
 /* ------------------------- */
 /* DECORATIVE STRIP */
