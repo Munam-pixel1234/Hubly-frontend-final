@@ -116,3 +116,12 @@
   top: 200px;        /* controls downward movement */
   left: 190px;      /* same horizontal alignment */
 }
+
+
+
+@media (max-width: 768px) {
+  .hero {
+    display: none;
+  }
+}
+

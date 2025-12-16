@@ -1,35 +1,38 @@
 /* ============================================== */
-/* PREVIEW AVATAR + BUBBLE (closed state)         */
+/* ============================================== */
+/* PREVIEW AVATAR + BUBBLE (FIXED & CENTERED)     */
 /* ============================================== */
 
-/* Wrapper holds avatar + bubble centered */
+/* Wrapper holds avatar + bubble */
 .previewWrapper {
   position: fixed;
   bottom: 100px;
   right: 28px;
+  width: 260px;                 /* SAME width as bubble */
   display: flex;
   flex-direction: column;
-  align-items: center;               /* center avatar horizontally */
+  align-items: center;          /* centers avatar to bubble */
   z-index: 999;
 }
 
-/* Avatar on top */
+/* Avatar perfectly centered on bubble */
 .previewAvatar {
   width: 48px;
   height: 48px;
-  margin-bottom: -14px;              /* overlap bubble slightly */
+  margin-bottom: -14px;         /* overlap bubble */
   z-index: 1001;
 }
 
 /* Message bubble */
 .previewBox {
-  width: 260px;
+  width: 100%;
   padding: 16px 18px;
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
   position: relative;
   z-index: 1000;
+  text-align: left;
 }
 
 .previewText {
@@ -38,6 +41,7 @@
   color: #3b3b3b;
 }
 
+/* Close button */
 .previewClose {
   position: absolute;
   top: 6px;
@@ -46,8 +50,8 @@
   border: none;
   font-size: 16px;
   cursor: pointer;
-  padding: 0;
 }
+
 
 /* ============================================== */
 /* FLOATING ROUND BUTTON                          */
@@ -328,3 +332,18 @@
   align-items: center;
   justify-content: center;
 }
+
+
+
+/* ============================================== */
+/* MOBILE: HIDE PREVIEW, USE FULL CHAT ONLY       */
+/* ============================================== */
+
+@media (max-width: 768px) {
+  .previewWrapper {
+    display: none !important;
+  }
+}
+
+
+

@@ -161,24 +161,23 @@ export default function Tickets() {
         <div className={styles.divider} />
 
         {tickets.map((t) => (
-          <button
-            key={t._id}
-            className={`${styles.chatItem} ${
-              selectedTicket?.ticketId === t.ticketId
-                ? styles.activeChat
-                : ""
-            }`}
-            onClick={() => setSelectedTicket(t)}
-          >
-            <img src="/assets/images/D3.png" alt="user" />
-            <div>
-              <p className={styles.chatName}>{t.userName}</p>
-              <p className={styles.chatPreview}>
-                {t.messages?.at(-1)?.text || "No messages"}
-              </p>
-            </div>
-          </button>
-        ))}
+  <button
+    key={t._id}
+    className={`${styles.chatItem} ${
+      selectedTicket?.ticketId === t.ticketId ? styles.activeChat : ""
+    }`}
+    onClick={() => setSelectedTicket(t)}
+  >
+    <img src="/assets/images/D3.png" alt="user" />
+    <div>
+      <p className={styles.chatName}>{t.userName}</p>
+      <p className={styles.chatPreview}>
+        {t.lastMessage || "No messages"}
+      </p>
+    </div>
+  </button>
+))}
+
       </section>
 
       {/* ================= CHAT BOX ================= */}

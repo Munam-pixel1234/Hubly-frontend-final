@@ -8,21 +8,19 @@ import Plans from "../../components/Plans/Plans";
 
 const Landing = () => {
   return (
-    <>
+    <div className="landingPage">
       <Navbar />
-      <Hero/>
-      <CoreSection/>
-      <Plans/>
-      
 
-     
+      <Hero />
+      <CoreSection />
+      <Plans />
 
       {/* Chat Widget Button */}
       <ChatButton />
 
       {/* Footer Added */}
       <Footer />
-    </>
+    </div>
   );
 };
 

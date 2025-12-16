@@ -23,3 +23,45 @@ input, select, textarea {
   width: var(--container);
   margin: auto;
 }
+
+
+
+/* ============================= */
+/* 📱 MOBILE VIEW – CHAT ONLY */
+/* ============================= */
+@media (max-width: 768px) {
+  /* Force full white background */
+  body {
+    background: #ffffff !important;
+  }
+
+  /* Hide everything on landing page */
+  .landingPage > * {
+    display: none !important;
+  }
+
+  /* Show ONLY chat widget */
+  .landingPage .chatButton,
+  .landingPage .chatWidget,
+  .landingPage [class*="Chat"],
+  .landingPage [class*="chat"] {
+    display: block !important;
+  }
+
+  /* Make chat widget fullscreen */
+  .chatWidget {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: #ffffff !important;
+    z-index: 9999;
+  }
+
+  /* Hide floating button if chat is open */
+  .chatButton {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+

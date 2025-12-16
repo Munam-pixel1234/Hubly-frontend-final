@@ -151,8 +151,13 @@ export default function Dashboard() {
 
                   {/* MESSAGE */}
                   <p className={styles.message}>
-                    {isResolved ? "Ticket has been resolved!" : ticket.lastMessage || "No messages"}
+                  {isResolved
+                  ? "Ticket has been resolved!"
+                  : ticket.lastMessage?.trim()
+                  ? ticket.lastMessage
+                  : "No messages"}
                   </p>
+
 
                   <div className={styles.divider}></div>
 
