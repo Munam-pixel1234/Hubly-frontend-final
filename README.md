@@ -9,7 +9,7 @@ Built using **React.js** and connected to a Node.js + MongoDB backend.
 ## 🌐 Live URLs
 
 - **Frontend:** 
-- **Backend:** https://hubly-backend-final.onrender.com
+- **Backend:** 
 
 ---
 
